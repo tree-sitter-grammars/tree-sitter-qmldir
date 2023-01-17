@@ -1,4 +1,4 @@
-# tree-sitter-pkgconfig
+# tree-sitter-qmldir
 
-Treesitter for pkgconfig build 
+Treesitter for qmldir build 
 
