@@ -41,26 +41,22 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "number"
-          },
-          {
-            "type": "SYMBOL",
             "name": "varname"
           },
           {
             "type": "SYMBOL",
             "name": "spliter"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "comment"
           }
         ]
       }
     },
-    "number": {
-      "type": "PATTERN",
-      "value": "[\\d]+"
-    },
     "varname": {
       "type": "PATTERN",
-      "value": "[A-Za-z\\-_]+"
+      "value": "[\\dA-Za-z\\-_]+"
     },
     "spliter": {
       "type": "CHOICE",
@@ -76,6 +72,19 @@
         {
           "type": "STRING",
           "value": ":"
+        }
+      ]
+    },
+    "comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "#"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^\\n]+"
         }
       ]
     }
