@@ -1,0 +1,54 @@
+==============
+qmldir1
+==============
+
+module steingatefu.components
+linktarget appsteingatefucplugin
+optional plugin appsteingatefucplugin
+classname steingatefu_componentsPlugin
+typeinfo appsteingatefuc.qmltypes
+prefer :/steingatefu/components/
+Set 1.0 qml/components/Set.qml
+
+---
+(source_file
+  (line
+    (varname)
+    (varname)
+    (spliter)
+    (varname))
+  (line
+    (varname)
+    (varname))
+  (line
+    (varname)
+    (varname)
+        (varname))
+      (line
+        (varname)
+        (varname))
+      (line
+        (varname)
+        (varname)
+        (spliter)
+        (varname))
+      (line
+        (varname)
+        (spliter)
+        (spliter)
+        (varname)
+        (spliter)
+        (varname)
+        (spliter))
+      (line
+        (varname)
+        (number)
+        (spliter)
+        (number)
+        (varname)
+        (spliter)
+        (varname)
+        (spliter)
+        (varname)
+        (spliter)
+        (varname)))
