@@ -1,12 +1,14 @@
-(varname) @variable
 (comment) @comment
+
+(varname) @variable
 
 (spliter) @punctuation.delimiter
 
-;(number) @number
+(line
+  left: (varname) @type.definition)
 
-((varname) @property
-  (#any-of? @property
+((varname) @keyword
+  (#any-of? @keyword
     "module"
     "plugin"
     "typeinfo"

@@ -35,24 +35,46 @@
       ]
     },
     "line": {
-      "type": "REPEAT1",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "varname"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "spliter"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "comment"
-          }
-        ]
-      }
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "left",
+              "content": {
+                "type": "SYMBOL",
+                "name": "varname"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "varname"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "spliter"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "comment"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
+        }
+      ]
     },
     "varname": {
       "type": "PATTERN",
