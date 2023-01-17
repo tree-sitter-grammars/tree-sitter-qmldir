@@ -34,6 +34,22 @@
         }
       ]
     },
+    "unit": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "varname"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "spliter"
+          }
+        ]
+      }
+    },
     "line": {
       "type": "CHOICE",
       "members": [
@@ -51,22 +67,51 @@
             {
               "type": "REPEAT",
               "content": {
-                "type": "CHOICE",
+                "type": "SEQ",
                 "members": [
                   {
-                    "type": "SYMBOL",
-                    "name": "varname"
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "unit"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "comment"
+                      }
+                    ]
                   },
                   {
-                    "type": "SYMBOL",
-                    "name": "spliter"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "comment"
+                    "type": "REPEAT1",
+                    "content": {
+                      "type": "STRING",
+                      "value": " "
+                    }
                   }
                 ]
               }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "unit"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "comment"
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             }
           ]
         },

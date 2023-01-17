@@ -4,10 +4,28 @@
 
 (spliter) @punctuation.delimiter
 
+; definition
 (line
   left: (varname) @type.definition)
 
-((varname) @keyword
+; left keyword
+(line
+  left: (varname)
+	@keyword
+  (#any-of? @keyword
+    "module"
+    "plugin"
+    "typeinfo"
+    "linktarget"
+    "prefer"
+    "classname"
+    "optional"
+    "depends"
+   )
+)
+
+; keyword
+((unit) @keyword
   (#any-of? @keyword
     "module"
     "plugin"
@@ -18,6 +36,8 @@
     "optional"
     "depends"
    ))
+
+; number
 ((varname) @number
   (#any-of? @number
     "0"

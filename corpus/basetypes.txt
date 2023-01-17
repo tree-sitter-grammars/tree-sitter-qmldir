@@ -19,42 +19,51 @@ Set 1.0 qml/components/Set.qml
     (comment))
   (line
     (varname)
-    (varname)
-    (spliter)
-    (varname)
+    (unit
+      (varname)
+      (spliter)
+      (varname))
     (comment))
   (line
     (varname)
-    (varname))
+    (unit
+      (varname)))
   (line
     (varname)
-    (varname)
-    (varname))
+    (unit
+      (varname))
+    (unit
+      (varname)))
   (line
     (varname)
-    (varname))
+    (unit
+      (varname)))
   (line
     (varname)
-    (varname)
-    (spliter)
-    (varname))
+    (unit
+      (varname)
+      (spliter)
+      (varname)))
   (line
     (varname)
-    (spliter)
-    (spliter)
-    (varname)
-    (spliter)
-    (varname)
-    (spliter))
+    (unit
+      (spliter)
+      (spliter)
+      (varname)
+      (spliter)
+      (varname)
+      (spliter)))
   (line
     (varname)
-    (varname)
-    (spliter)
-    (varname)
-    (varname)
-    (spliter)
-    (varname)
-    (spliter)
-    (varname)
-    (spliter)
-    (varname)))
+    (unit
+      (varname)
+      (spliter)
+      (varname))
+    (unit
+      (varname)
+      (spliter)
+      (varname)
+      (spliter)
+      (varname)
+      (spliter)
+      (varname))))

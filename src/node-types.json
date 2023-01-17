@@ -28,11 +28,7 @@
           "named": true
         },
         {
-          "type": "spliter",
-          "named": true
-        },
-        {
-          "type": "varname",
+          "type": "unit",
           "named": true
         }
       ]
@@ -59,7 +55,30 @@
     "fields": {}
   },
   {
+    "type": "unit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "spliter",
+          "named": true
+        },
+        {
+          "type": "varname",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "\n",
+    "named": false
+  },
+  {
+    "type": " ",
     "named": false
   },
   {
