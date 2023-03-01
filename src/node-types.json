@@ -1,30 +1,26 @@
 [
   {
-    "type": "comment",
+    "type": "command",
     "named": true,
-    "fields": {}
-  },
-  {
-    "type": "line",
-    "named": true,
-    "fields": {
-      "left": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "varname",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "comment",
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "number",
           "named": true
         },
         {
@@ -35,7 +31,12 @@
     }
   },
   {
-    "type": "source_file",
+    "type": "keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "module_definition",
     "named": true,
     "fields": {},
     "children": {
@@ -43,31 +44,7 @@
       "required": false,
       "types": [
         {
-          "type": "line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "spliter",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "unit",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "spliter",
-          "named": true
-        },
-        {
-          "type": "varname",
+          "type": "command",
           "named": true
         }
       ]
@@ -78,27 +55,67 @@
     "named": false
   },
   {
-    "type": " ",
+    "type": "classname",
     "named": false
   },
   {
-    "type": "#",
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "depends",
     "named": false
   },
   {
-    "type": ".",
+    "type": "designersupported",
     "named": false
   },
   {
-    "type": "/",
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "internal",
     "named": false
   },
   {
-    "type": ":",
+    "type": "linktarget",
     "named": false
   },
   {
-    "type": "varname",
+    "type": "module",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "optional",
+    "named": false
+  },
+  {
+    "type": "plugin",
+    "named": false
+  },
+  {
+    "type": "prefer",
+    "named": false
+  },
+  {
+    "type": "singleton",
+    "named": false
+  },
+  {
+    "type": "typeinfo",
+    "named": false
+  },
+  {
+    "type": "unit",
     "named": true
   }
 ]
