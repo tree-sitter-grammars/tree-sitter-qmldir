@@ -1,26 +1,27 @@
 [package]
 name = "tree-sitter-qmldir"
-description = "qmldir grammar for the tree-sitter parsing library"
+description = "Qmldir grammar for tree-sitter"
 version = "0.0.1"
+authors = [
+	"Decodetalkers <ShootingStarDragons@protonmail.com>",
+	"Amaan Qureshi <amaanq12@gmail.com",
+]
+license = "MIT"
+readme = "bindings/rust/README.md"
 keywords = ["incremental", "parsing", "qmldir"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-qmldir"
-edition = "2018"
-license = "MIT"
+repository = "https://github.com/Decodetalkers/tree-sitter-qmldir"
+edition = "2021"
+autoexamples = false
 
 build = "bindings/rust/build.rs"
-include = [
-  "bindings/rust/*",
-  "grammar.js",
-  "queries/*",
-  "src/*",
-]
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
 
 [lib]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = "~0.20.3"
+tree-sitter = "~0.20.9"
 
 [build-dependencies]
 cc = "1.0"

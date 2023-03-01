@@ -1,54 +1,20 @@
-(comment) @comment
+; Keywords
 
-(varname) @variable
+(keyword) @keyword
 
-(spliter) @punctuation.delimiter
+; Literals
 
-; definition
-(line
-  left: (varname) @type.definition)
+(number) @number
 
-; left keyword
-(line
-  left: (varname)
-	@keyword
-  (#any-of? @keyword
-    "module"
-    "plugin"
-    "typeinfo"
-    "linktarget"
-    "prefer"
-    "classname"
-    "optional"
-    "depends"
-   )
-)
+(float) @float
 
-; keyword
-((unit) @keyword
-  (#any-of? @keyword
-    "module"
-    "plugin"
-    "typeinfo"
-    "linktarget"
-    "prefer"
-    "classname"
-    "optional"
-    "depends"
-   ))
+; Variables
 
-; number
-((varname) @number
-  (#any-of? @number
-    "0"
-    "1"
-    "2"
-    "3"
-    "4"
-    "5"
-    "6"
-    "7"
-    "8"
-    "9"
-    "10"
-   ))
+[
+  (identifier)
+  (unit)
+] @variable
+
+; Comments
+
+(comment) @comment @spell
