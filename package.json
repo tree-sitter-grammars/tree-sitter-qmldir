@@ -26,6 +26,7 @@
     "prettier": "^2.7.1",
     "tree-sitter-cli": "^0.20.6"
   },
+  "repository": "https://github.com/Decodetalkers/tree-sitter-qmldir",
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
     "lint": "eslint grammar.js",

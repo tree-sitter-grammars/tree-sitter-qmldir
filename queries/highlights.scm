@@ -1,3 +1,7 @@
+; Preproc
+
+(command (identifier) @preproc)
+
 ; Keywords
 
 (keyword) @keyword
