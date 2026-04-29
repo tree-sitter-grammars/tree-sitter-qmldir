@@ -51,6 +51,6 @@ module.exports = grammar({
 
     float: _ => /[0-9]*\.[0-9]+/,
 
-    comment: _ => token(seq('#', /[^\n]+/g)),
+    comment: _ => token(seq('#', /[^\n]+/)),
   },
 });

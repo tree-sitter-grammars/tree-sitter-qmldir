@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-qmldir"
 description = "Qmldir grammar for tree-sitter"
-version = "0.0.1"
+version = "0.1.0"
 authors = [
 	"Decodetalkers <ShootingStarDragons@protonmail.com>",
 	"Amaan Qureshi <amaanq12@gmail.com",
@@ -21,7 +21,7 @@ include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = "~0.20.9"
+tree-sitter = "~0.26.8"
 
 [build-dependencies]
-cc = "1.0"
+cc = "1.2"
