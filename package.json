@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Decodetalkers/tree-sitter-qmldir#readme",
   "dependencies": {
-    "nan": "^2.16.0"
+    "nan": "^2.16.0",
+    "node-addon-api": "^8.5.0",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
@@ -27,10 +29,16 @@
     "eslint-config-google": "^0.14.0",
     "globals": "^17.5.0",
     "prettier": "^3.8.3",
-    "tree-sitter-cli": "^0.26.8"
+    "tree-sitter-cli": "^0.26.8",
+    "prebuildify": "^6.0.1",
+    "tree-sitter": "^0.22.4"
   },
+  "type": "module",
   "repository": "https://github.com/Decodetalkers/tree-sitter-qmldir",
   "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
     "build": "tree-sitter generate && node-gyp build",
     "lint": "eslint grammar.js",
     "parse": "tree-sitter parse",
