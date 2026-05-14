@@ -1,24 +1,13 @@
-const {
+import {
   defineConfig,
-} = require("eslint/config");
+} from "eslint/config";
 
-const globals = require("globals");
-const js = require("@eslint/js");
+import globals from "globals";
 
-const {
-  FlatCompat,
-} = require("@eslint/eslintrc");
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-});
-
-module.exports = defineConfig([{
+export default defineConfig([{
   languageOptions: {
     globals: {
-      ...globals.commonjs,
+      ...globals.es2024,
     },
 
     ecmaVersion: "latest",
