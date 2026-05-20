@@ -31,7 +31,7 @@
     "prettier": "^3.8.3",
     "tree-sitter-cli": "^0.26.8",
     "prebuildify": "^6.0.1",
-    "tree-sitter": "^0.22.4"
+    "tree-sitter": "^0.25.0"
   },
   "type": "module",
   "repository": "https://github.com/Decodetalkers/tree-sitter-qmldir",
