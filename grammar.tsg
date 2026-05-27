@@ -1,0 +1,35 @@
+// QMLDir grammar for tree-sitter (native DSL).
+// Translated from grammar.js.
+
+grammar {
+    language: "qmldir",
+    extras: [comment, regexp(r"\s")],
+}
+
+rule module_definition { repeat(command) }
+
+rule command {
+    seq(
+        choice(keyword, identifier),
+        repeat(choice(unit, number, float)),
+        "\n",
+    )
+}
+
+rule keyword {
+    choice(
+        "classname", "depends", "designersupported", "internal",
+        "linktarget", "module", "optional", "plugin", "prefer",
+        "singleton", "typeinfo",
+    )
+}
+
+rule identifier { regexp(r"[A-Za-z_][A-Za-z0-9_]*") }
+
+rule unit { regexp(r"[A-Za-z_:\.\/][A-Za-z0-9_\.\/:]*") }
+
+rule number { regexp(r"[0-9]+") }
+
+rule float { regexp(r"[0-9]*\.[0-9]+") }
+
+rule comment { token(seq("#", regexp(r"[^\n]+"))) }
