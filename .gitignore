@@ -4,3 +4,7 @@ package-lock.json
 /node_modules
 /examples/*/
 /target
+.zig-cache/
+zig-cache/
+zig-out/
+zig-pkg/
